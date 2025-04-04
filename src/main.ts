@@ -16,7 +16,7 @@ const loadScripts = async () => {
   //@ts-ignore
   await import('./vendor/bootstrap/js/bootstrap.bundle');
   //@ts-ignore
-  await import('./vendor/adminlte/dist/js/adminlte');
+  await import('./vendor/adminlte/js/adminlte');
   //@ts-ignore
   await import('./vendor/overlayScrollbars/js/jquery.overlayScrollbars');
 };
