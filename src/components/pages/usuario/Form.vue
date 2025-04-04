@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { computed, ref, watch } from 'vue';
 import { PersonaService } from '@/services/PersonaService';
 import { SwalInfo } from '@/services/Swal';
+import { computed, ref, watch } from 'vue';
 
 const emit = defineEmits(['onDeseleccionarPersona', 'onRefrescarTabla']);
 const props = defineProps<{ personaId: number | null }>();
@@ -76,13 +76,13 @@ async function onSubmit() {
       <label for="email" class="form-label">Email</label>
       <input type="email" class="form-control" id="email" v-model="persona.email" />
     </div>
-    <div v-if="!props.personaId" class="d-flex justify-content-center gap-1">
-      <button type="submit" class="btn btn-primary">Registrar</button>
-      <button type="button" class="btn btn-secondary" @click="onClean()">Limpiar</button>
+    <div v-if="!props.personaId" class="d-flex justify-content-center">
+      <button type="submit" class="btn btn-primary mx-1">Registrar</button>
+      <button type="button" class="btn btn-secondary mx-1" @click="onClean()">Limpiar</button>
     </div>
-    <div v-if="!!props.personaId" class="d-flex justify-content-center gap-1">
-      <button type="submit" class="btn btn-success">Actualizar</button>
-      <button type="button" class="btn btn-danger" @click="onCancel()">Cancelar</button>
+    <div v-if="!!props.personaId" class="d-flex justify-content-center">
+      <button type="submit" class="btn btn-success mx-1">Actualizar</button>
+      <button type="button" class="btn btn-danger mx-1" @click="onCancel()">Cancelar</button>
     </div>
   </form>
 </template>

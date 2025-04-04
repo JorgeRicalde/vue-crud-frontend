@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import ContentBody from '@/components/ContentBody.vue';
 import ContentHeader from '@/components/ContentHeader.vue';
-import Form from '@/components/Form.vue';
-import Table from '@/components/Table.vue';
+import Form from '@/components/pages/usuario/Form.vue';
+import Table from '@/components/pages/usuario/Table.vue';
 import { ref } from 'vue';
 
 const tablaRef = ref();
